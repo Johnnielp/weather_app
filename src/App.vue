@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-h-screen font-Roboto bg-red-400 bg-cover bg-center"
-    style="background-image: url('/images/weather-img6.jpg');">
+    style="background-image: url('/images/weather-img6.jpg'); background-position:center;">
     <SiteNavigation />
     <RouterView v-slot="{ Component }">
       <Transition name="page" mode="out-in">
