@@ -9,6 +9,10 @@
             </RouterLink>
 
             <div class="flex gap-3 flex-1 justify-end">
+                <RouterLink :to="{ name: 'home' }">
+                    <i class="fa-solid fa-house text-xl text-yellow-400 hover:text-red-400 duration-150 cursor-pointer"
+                        @click="goBack()"></i>
+                </RouterLink>
                 <i class="fa-solid fa-circle-info text-yellow-400 text-xl hover:text-red-400 duration-150 cursor-pointer"
                     @click="toggleModal"></i>
                 <i class="fa-solid fa-plus text-xl text-yellow-400 hover:text-red-400 duration-150 cursor-pointer"
@@ -81,6 +85,7 @@ const addCity = () => {
     query.id = locationObj.id;
     router.replace({ query });
 };
+
 
 const modalActive = ref(null);
 const toggleModal = () => {
